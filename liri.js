@@ -87,7 +87,7 @@ function getRandom() {
                var argTwo = dataArray[1];
                switch(argOne) {
                     case "my-tweets":
-                         getTweets();
+                         myTweets();
                          break;
                     case "spotify-this-song":
                          function spotifyThisSong() {
@@ -107,9 +107,9 @@ function getRandom() {
                                    fs.appendFile('log.txt', "Artist: " + data.tracks.items[0].artists[0].name + "\n" + "Song Name: " + data.tracks.items[0].name + "\n" + "Spotify Preview Link: " + data.tracks.items[0].external_urls.spotify + "\n" + "Album: " + data.tracks.items[0].album.name + "\n" + "=================================================================");
                               });
                          }
-                         getSong();
+                         spotifyThisSong();
                          break;
-                    case "movie-this":
+                    case "movieThis":
                          function movieThis() {
                               var queryInput = "Resident Evil: Vendetta";
                               if (argTwo !== undefined) {
@@ -143,12 +143,12 @@ function getRandom() {
 
 switch(argOne) {
      case "my-tweets":
-          getTweets();
+          myTweets();
           break;
      case "spotify-this-song":
-          getSong();
+          spotifyThisSong();
           break;
-     case "movie-this":
+     case "movieThis":
           getMovie();
           break;
      case "do-what-it-says":
