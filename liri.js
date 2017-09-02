@@ -50,7 +50,7 @@ function spotifyThisSong() {
 }
 
 function movieThis() {
-     var queryInput = "Resident Evil: Vendetta";
+     var queryInput = "";
      if (argTwo !== undefined) {
           queryInput = argTwo;
      }
