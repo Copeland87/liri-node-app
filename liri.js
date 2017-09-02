@@ -109,7 +109,7 @@ function getRandom() {
                          }
                          spotifyThisSong();
                          break;
-                    case "movieThis":
+                    case "movie-this":
                          function movieThis() {
                               var queryInput = "Resident Evil: Vendetta";
                               if (argTwo !== undefined) {
@@ -134,7 +134,7 @@ function getRandom() {
                                    }
                               });
                          }
-                         getMovie();
+                         movieThis();
                          break;
                }
           }
@@ -148,8 +148,8 @@ switch(argOne) {
      case "spotify-this-song":
           spotifyThisSong();
           break;
-     case "movieThis":
-          getMovie();
+     case "movie-this":
+          movieThis();
           break;
      case "do-what-it-says":
           getRandom();
