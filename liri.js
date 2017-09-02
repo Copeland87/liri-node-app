@@ -17,7 +17,7 @@ var params = {count: 20};
 // spotify
 var spotify = require('spotify');
 
-function getTweets(){
+function myTweets(){
      client.get('statuses/user_timeline', params, function(error, tweets, response){
           if (!error) {
                for (var i = 0; i < tweets.length; i++) {
@@ -31,8 +31,8 @@ function getTweets(){
      });
 }
 
-function getSong() {
-     var queryInput = "with or without you";
+function spotifyThisSong() {
+     var queryInput = "";
      if (argTwo !== undefined) {
           queryInput = argTwo;
      }
@@ -49,7 +49,7 @@ function getSong() {
      });
 }
 
-function getMovie() {
+function movieThis() {
      var queryInput = "Resident Evil: Vendetta";
      if (argTwo !== undefined) {
           queryInput = argTwo;
@@ -90,7 +90,7 @@ function getRandom() {
                          getTweets();
                          break;
                     case "spotify-this-song":
-                         function getSong() {
+                         function spotifyThisSong() {
                               var queryInput = "with or without you";
                               if (argTwo !== undefined) {
                                    queryInput = argTwo;
@@ -110,7 +110,7 @@ function getRandom() {
                          getSong();
                          break;
                     case "movie-this":
-                         function getMovie() {
+                         function movieThis() {
                               var queryInput = "Resident Evil: Vendetta";
                               if (argTwo !== undefined) {
                                    queryInput = argTwo;
